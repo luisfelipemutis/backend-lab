@@ -1,0 +1,4 @@
+1,Papas,82.2
+2,Refresco,60.0
+3,Sandwich,150.7
+4,chocolate,34.2
