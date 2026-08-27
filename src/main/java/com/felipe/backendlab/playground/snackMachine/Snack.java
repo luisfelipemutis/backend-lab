@@ -1,4 +1,4 @@
-package com.felipe.backendlab.playground.snackMachine;
+package com.felipe.backendlab.playground.snackmachine;
 
 import java.io.Serializable;
 import java.util.Objects;

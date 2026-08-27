@@ -1,881 +1,148 @@
 # Backend Lab
 
-Laboratorio personal de estudio y práctica de **Software Engineering**, enfocado actualmente en el desarrollo de habilidades como **Backend Software Engineer con Java**.
+Laboratorio personal para estudiar Java backend de forma practica. Este repositorio se usa para practicar conceptos de Java Core, OOP, colecciones, concurrencia, streams, principios SOLID, patrones de diseno y ejercicios de playground.
 
-El objetivo del proyecto en esta etapa es consolidar fundamentos sólidos en Java y su ecosistema, antes de expandirse a otras tecnologías.
+## Objetivo del proyecto
 
-El repositorio contiene implementaciones prácticas, experimentos, ejercicios y ejemplos ejecutables relacionados principalmente con Java, backend, arquitectura, patrones de diseño, algoritmos y buenas prácticas de ingeniería de software.
+- Aprender conceptos de backend con evidencia en codigo.
+- Consolidar fundamentos antes de profundizar en Spring Boot, Docker, CI/CD y arquitectura avanzada.
+- Mantener historial de aprendizaje incremental por temas.
 
----
+## Estado actual del repositorio (revision completa)
 
-# 🎯 Objetivo
+- Build tool: Maven ([pom.xml](pom.xml)).
+- Version de Java configurada: 23.
 
-Este repositorio funciona como un **laboratorio técnico de aprendizaje enfocado en Java**.
+## Convencion usada en este README
 
-La finalidad no es construir una aplicación de negocio específica, sino estudiar conceptos de ingeniería de software mediante implementaciones pequeñas, aisladas y ejecutables.
+- Estado Implementada: la clase tiene logica o demostracion ejecutable.
+- Estado Vacia: la clase existe como placeholder porque el concepto aun no se ha estudiado a profundidad.
 
-Los objetivos principales son:
+## Inventario completo de clases
 
-* Dominar los fundamentos de **Java como lenguaje principal**.
-* Comprender conceptos de programación y arquitectura.
-* Convertir conceptos teóricos en implementaciones prácticas.
-* Experimentar con diferentes alternativas de diseño.
-* Resolver ejercicios relacionados con los conceptos estudiados.
-* Validar el conocimiento mediante pruebas y experimentación.
-* Preparar conocimientos para entrevistas técnicas.
-* Practicar Clean Code y SOLID.
-* Analizar performance, escalabilidad y mantenibilidad.
-* Mantener un historial práctico del aprendizaje mediante Git.
+### Design Patterns
 
----
+#### Package com.felipe.backendlab.designpatterns.behavioral
 
-# 🧠 Filosofía de aprendizaje
+| Clase | Archivo | Estado | Comentario |
+|---|---|---|---|
+| ObserverExample | [src/main/java/com/felipe/backendlab/designpatterns/behavioral/ObserverExample.java](src/main/java/com/felipe/backendlab/designpatterns/behavioral/ObserverExample.java) | Vacia | Placeholder de estudio |
+| StrategyExample | [src/main/java/com/felipe/backendlab/designpatterns/behavioral/StrategyExample.java](src/main/java/com/felipe/backendlab/designpatterns/behavioral/StrategyExample.java) | Vacia | Placeholder de estudio |
 
-El proyecto sigue un ciclo de aprendizaje práctico:
+#### Package com.felipe.backendlab.designpatterns.creational
 
-```text
-ESTUDIAR
-    ↓
-CODIFICAR
-    ↓
-PRACTICAR
-    ↓
-PROBAR
-    ↓
-ANALIZAR
-    ↓
-VOLVER A ESTUDIAR
-    ↓
-CODIFICAR
-    ↓
-...
-```
+| Clase | Archivo | Estado | Comentario |
+|---|---|---|---|
+| BuilderExample | [src/main/java/com/felipe/backendlab/designpatterns/creational/BuilderExample.java](src/main/java/com/felipe/backendlab/designpatterns/creational/BuilderExample.java) | Vacia | Placeholder de estudio |
+| FactoryExample | [src/main/java/com/felipe/backendlab/designpatterns/creational/FactoryExample.java](src/main/java/com/felipe/backendlab/designpatterns/creational/FactoryExample.java) | Vacia | Placeholder de estudio |
+| SingletonExample | [src/main/java/com/felipe/backendlab/designpatterns/creational/SingletonExample.java](src/main/java/com/felipe/backendlab/designpatterns/creational/SingletonExample.java) | Vacia | Placeholder de estudio |
 
-El objetivo no es simplemente leer un concepto y marcarlo como aprendido.
+### Java Core
 
-Un concepto se considera consolidado cuando existe evidencia práctica de que puede:
+#### Package com.felipe.backendlab.javacore.collections
 
-* Explicarse con claridad.
-* Implementarse desde cero.
-* Utilizarse en diferentes escenarios.
-* Modificarse sin depender de una solución previamente copiada.
-* Probarse y verificarse.
-* Compararse con alternativas.
-* Justificar técnicamente cuándo utilizarlo y cuándo evitarlo.
+| Clase | Archivo | Estado | Comentario |
+|---|---|---|---|
+| ArrayListExample | [src/main/java/com/felipe/backendlab/javacore/collections/ArrayListExample.java](src/main/java/com/felipe/backendlab/javacore/collections/ArrayListExample.java) | Implementada | Ejemplo funcional |
+| HashMapExample | [src/main/java/com/felipe/backendlab/javacore/collections/HashMapExample.java](src/main/java/com/felipe/backendlab/javacore/collections/HashMapExample.java) | Implementada | Ejemplo funcional |
+| HashSetExample | [src/main/java/com/felipe/backendlab/javacore/collections/HashSetExample.java](src/main/java/com/felipe/backendlab/javacore/collections/HashSetExample.java) | Vacia | Placeholder de estudio |
+| LinkedListExample | [src/main/java/com/felipe/backendlab/javacore/collections/LinkedListExample.java](src/main/java/com/felipe/backendlab/javacore/collections/LinkedListExample.java) | Vacia | Placeholder de estudio |
+| QueueExample | [src/main/java/com/felipe/backendlab/javacore/collections/QueueExample.java](src/main/java/com/felipe/backendlab/javacore/collections/QueueExample.java) | Vacia | Placeholder de estudio |
+| SetsExample | [src/main/java/com/felipe/backendlab/javacore/collections/SetsExample.java](src/main/java/com/felipe/backendlab/javacore/collections/SetsExample.java) | Implementada | TreeSet y operaciones basicas |
+| StackExample | [src/main/java/com/felipe/backendlab/javacore/collections/StackExample.java](src/main/java/com/felipe/backendlab/javacore/collections/StackExample.java) | Vacia | Placeholder de estudio |
+| TreeMapExample | [src/main/java/com/felipe/backendlab/javacore/collections/TreeMapExample.java](src/main/java/com/felipe/backendlab/javacore/collections/TreeMapExample.java) | Vacia | Placeholder de estudio |
 
-### Principio fundamental
+#### Package com.felipe.backendlab.javacore.concurrency
 
-> **Estudiar → Codificar → Practicar → Probar → Analizar → Repetir.**
+| Clase | Archivo | Estado | Comentario |
+|---|---|---|---|
+| CompletableFutureExample | [src/main/java/com/felipe/backendlab/javacore/concurrency/CompletableFutureExample.java](src/main/java/com/felipe/backendlab/javacore/concurrency/CompletableFutureExample.java) | Vacia | Placeholder de estudio |
+| ExecutorServiceExample | [src/main/java/com/felipe/backendlab/javacore/concurrency/ExecutorServiceExample.java](src/main/java/com/felipe/backendlab/javacore/concurrency/ExecutorServiceExample.java) | Vacia | Placeholder de estudio |
+| RunnableExample | [src/main/java/com/felipe/backendlab/javacore/concurrency/RunnableExample.java](src/main/java/com/felipe/backendlab/javacore/concurrency/RunnableExample.java) | Vacia | Placeholder de estudio |
+| SynchronizationExample | [src/main/java/com/felipe/backendlab/javacore/concurrency/SynchronizationExample.java](src/main/java/com/felipe/backendlab/javacore/concurrency/SynchronizationExample.java) | Vacia | Placeholder de estudio |
+| ThreadExample | [src/main/java/com/felipe/backendlab/javacore/concurrency/ThreadExample.java](src/main/java/com/felipe/backendlab/javacore/concurrency/ThreadExample.java) | Vacia | Placeholder de estudio |
 
-El código es parte del proceso de aprendizaje y debe servir simultáneamente como:
+#### Package com.felipe.backendlab.javacore.controlflow
 
-* implementación;
-* experimento;
-* referencia;
-* evidencia del aprendizaje;
-* material de repaso.
+| Clase | Archivo | Estado | Comentario |
+|---|---|---|---|
+| ForExample | [src/main/java/com/felipe/backendlab/javacore/controlflow/ForExample.java](src/main/java/com/felipe/backendlab/javacore/controlflow/ForExample.java) | Implementada | Estructuras de control |
 
----
+#### Package com.felipe.backendlab.javacore.language
 
-# 📊 Progreso
+| Clase | Archivo | Estado | Comentario |
+|---|---|---|---|
+| VarargsExample | [src/main/java/com/felipe/backendlab/javacore/language/VarargsExample.java](src/main/java/com/felipe/backendlab/javacore/language/VarargsExample.java) | Implementada | Varargs |
 
-## Estados
+#### Package com.felipe.backendlab.javacore.oop
 
-| Símbolo | Estado      |
-| ------- | ----------- |
-| `[ ]`   | Pendiente   |
-| `[~]`   | En estudio  |
-| `[x]`   | Consolidado |
+| Clase principal | Archivo | Tipos declarados en el archivo | Estado | Comentario |
+|---|---|---|---|---|
+| AbstractClassExample | [src/main/java/com/felipe/backendlab/javacore/oop/AbstractClassExample.java](src/main/java/com/felipe/backendlab/javacore/oop/AbstractClassExample.java) | AbstractClassExample, Animal2, Perro2, Gato2 | Implementada | Ejemplo OOP completo |
+| ClassExample | [src/main/java/com/felipe/backendlab/javacore/oop/ClassExample.java](src/main/java/com/felipe/backendlab/javacore/oop/ClassExample.java) | ClassExample, Persona | Implementada | Clases y objetos |
+| ClassInheritance | [src/main/java/com/felipe/backendlab/javacore/oop/ClassInheritance.java](src/main/java/com/felipe/backendlab/javacore/oop/ClassInheritance.java) | ClassInheritance, Animal, Perro | Implementada | Herencia |
+| ClassPolymorphism | [src/main/java/com/felipe/backendlab/javacore/oop/ClassPolymorphism.java](src/main/java/com/felipe/backendlab/javacore/oop/ClassPolymorphism.java) | ClassPolymorphism, Animal1, Perro1, Cat1 | Implementada | Polimorfismo |
+| ExampleSalesSystem | [src/main/java/com/felipe/backendlab/javacore/oop/ExampleSalesSystem.java](src/main/java/com/felipe/backendlab/javacore/oop/ExampleSalesSystem.java) | ExampleSalesSystem, Order, Product | Implementada | Mini dominio de ventas |
+| FilesInJava | [src/main/java/com/felipe/backendlab/javacore/oop/FilesInJava.java](src/main/java/com/felipe/backendlab/javacore/oop/FilesInJava.java) | FilesInJava | Implementada | IO de archivos |
+| InterfaceExample | [src/main/java/com/felipe/backendlab/javacore/oop/InterfaceExample.java](src/main/java/com/felipe/backendlab/javacore/oop/InterfaceExample.java) | InterfaceExample, PaymentMethod, CreditCardPayment, PayPalPayment | Implementada | Interfaces |
+| JavaBeansExample | [src/main/java/com/felipe/backendlab/javacore/oop/JavaBeansExample.java](src/main/java/com/felipe/backendlab/javacore/oop/JavaBeansExample.java) | JavaBeansExample, UsuarioBean, Usuario | Implementada | JavaBeans y encapsulamiento |
+| JavaExceptions | [src/main/java/com/felipe/backendlab/javacore/oop/JavaExceptions.java](src/main/java/com/felipe/backendlab/javacore/oop/JavaExceptions.java) | JavaExceptions | Implementada | Manejo basico de excepciones |
+| JavaExceptionsExample | [src/main/java/com/felipe/backendlab/javacore/oop/JavaExceptionsExample.java](src/main/java/com/felipe/backendlab/javacore/oop/JavaExceptionsExample.java) | JavaExceptionsExample, Aritmetic | Implementada | Excepciones + finally |
+| StaticAndDynamicContext | [src/main/java/com/felipe/backendlab/javacore/oop/StaticAndDynamicContext.java](src/main/java/com/felipe/backendlab/javacore/oop/StaticAndDynamicContext.java) | StaticAndDynamicContext, Person | Implementada | Contexto estatico y dinamico |
+| StaticAndDynamicContextExId | [src/main/java/com/felipe/backendlab/javacore/oop/StaticAndDynamicContextExId.java](src/main/java/com/felipe/backendlab/javacore/oop/StaticAndDynamicContextExId.java) | StaticAndDynamicContextExId, Person1 | Implementada | Contexto estatico aplicado |
 
-### Significado
+#### Package com.felipe.backendlab.javacore.streams
 
-**Pendiente**
+| Clase | Archivo | Estado | Comentario |
+|---|---|---|---|
+| CollectExample | [src/main/java/com/felipe/backendlab/javacore/streams/CollectExample.java](src/main/java/com/felipe/backendlab/javacore/streams/CollectExample.java) | Vacia | Placeholder de estudio |
+| FilterExample | [src/main/java/com/felipe/backendlab/javacore/streams/FilterExample.java](src/main/java/com/felipe/backendlab/javacore/streams/FilterExample.java) | Vacia | Placeholder de estudio |
+| FlatMapExample | [src/main/java/com/felipe/backendlab/javacore/streams/FlatMapExample.java](src/main/java/com/felipe/backendlab/javacore/streams/FlatMapExample.java) | Vacia | Placeholder de estudio |
+| MapExample | [src/main/java/com/felipe/backendlab/javacore/streams/MapExample.java](src/main/java/com/felipe/backendlab/javacore/streams/MapExample.java) | Vacia | Placeholder de estudio |
+| ReduceExample | [src/main/java/com/felipe/backendlab/javacore/streams/ReduceExample.java](src/main/java/com/felipe/backendlab/javacore/streams/ReduceExample.java) | Vacia | Placeholder de estudio |
 
-El concepto todavía no ha sido estudiado.
+### Playground
 
-**En estudio**
+El Playground es el patio de juegos o patio de experimentacion del repositorio: aqui se prueban ideas, se comparan enfoques y se construyen prototipos pequenos antes de formalizar conceptos en otras secciones.
 
-El concepto está siendo estudiado, pero todavía se encuentra en proceso de comprensión, implementación o experimentación.
+Importante: snackMachine y snackMachineFile no son la misma implementacion.
 
-**Consolidado**
+#### Implementacion A: snackMachine (sin arquitectura por capas)
 
-El concepto ha sido estudiado, implementado, practicado y probado, y existe suficiente comprensión para explicarlo y utilizarlo de forma independiente.
+Package actual: com.felipe.backendlab.playground.snackMachine
 
-> `[x]` no significa simplemente "ya lo vi". Significa que el concepto ha pasado por el ciclo práctico de aprendizaje.
+| Clase | Archivo | Estado | Comentario |
+|---|---|---|---|
+| Snack | [src/main/java/com/felipe/backendlab/playground/snackMachine/Snack.java](src/main/java/com/felipe/backendlab/playground/snackMachine/Snack.java) | Implementada | Entidad snack |
+| Snacks | [src/main/java/com/felipe/backendlab/playground/snackMachine/Snacks.java](src/main/java/com/felipe/backendlab/playground/snackMachine/Snacks.java) | Implementada | Catalogo en memoria |
+| SnacksMachine | [src/main/java/com/felipe/backendlab/playground/snackMachine/SnacksMachine.java](src/main/java/com/felipe/backendlab/playground/snackMachine/SnacksMachine.java) | Implementada | App consola simple, sin capas |
 
----
+#### Implementacion B: snackMachineFile (con arquitectura en capas)
 
-# ☕ Java Core
+Package actual: com.felipe.backendlab.playground.snackMachineFile
 
-## OOP — Object-Oriented Programming
+Subpaquetes actuales:
+- com.felipe.backendlab.playground.snackMachineFile.domain
+- com.felipe.backendlab.playground.snackMachineFile.service
+- com.felipe.backendlab.playground.snackMachineFile.presentation
 
-* [x] Classes
+| Clase | Archivo | Estado | Comentario |
+|---|---|---|---|
+| Snack | [src/main/java/com/felipe/backendlab/playground/snackMachineFile/domain/Snack.java](src/main/java/com/felipe/backendlab/playground/snackMachineFile/domain/Snack.java) | Implementada | Capa domain |
+| SnacksMachine | [src/main/java/com/felipe/backendlab/playground/snackMachineFile/presentation/SnacksMachine.java](src/main/java/com/felipe/backendlab/playground/snackMachineFile/presentation/SnacksMachine.java) | Implementada | Capa presentation |
+| IServiceSnacks | [src/main/java/com/felipe/backendlab/playground/snackMachineFile/service/IServiceSnacks.java](src/main/java/com/felipe/backendlab/playground/snackMachineFile/service/IServiceSnacks.java) | Implementada | Contrato de la capa service |
+| ServiceSnacksFiles | [src/main/java/com/felipe/backendlab/playground/snackMachineFile/service/ServiceSnacksFiles.java](src/main/java/com/felipe/backendlab/playground/snackMachineFile/service/ServiceSnacksFiles.java) | Implementada | Servicio con persistencia en archivo |
+| ServiceSnacksList | [src/main/java/com/felipe/backendlab/playground/snackMachineFile/service/ServiceSnacksList.java](src/main/java/com/felipe/backendlab/playground/snackMachineFile/service/ServiceSnacksList.java) | Implementada | Servicio en memoria |
 
-    * Código: [`ClassExample.java`](src/main/java/com/felipe/backendlab/javacore/oop/ClassExample.java)
+### SOLID
 
-* [x] Inheritance
+#### Package com.felipe.backendlab.solid
 
-    * Código: [`ClassInheritance.java`](src/main/java/com/felipe/backendlab/javacore/oop/ClassInheritance.java)
+| Clase | Archivo | Estado | Comentario |
+|---|---|---|---|
+| DependencyInversionExample | [src/main/java/com/felipe/backendlab/solid/DependencyInversionExample.java](src/main/java/com/felipe/backendlab/solid/DependencyInversionExample.java) | Vacia | Placeholder de estudio |
+| InterfaceSegregationExample | [src/main/java/com/felipe/backendlab/solid/InterfaceSegregationExample.java](src/main/java/com/felipe/backendlab/solid/InterfaceSegregationExample.java) | Vacia | Placeholder de estudio |
+| LiskovExample | [src/main/java/com/felipe/backendlab/solid/LiskovExample.java](src/main/java/com/felipe/backendlab/solid/LiskovExample.java) | Vacia | Placeholder de estudio |
+| OpenClosedExample | [src/main/java/com/felipe/backendlab/solid/OpenClosedExample.java](src/main/java/com/felipe/backendlab/solid/OpenClosedExample.java) | Vacia | Placeholder de estudio |
+| SingleResponsibilityExample | [src/main/java/com/felipe/backendlab/solid/SingleResponsibilityExample.java](src/main/java/com/felipe/backendlab/solid/SingleResponsibilityExample.java) | Vacia | Placeholder de estudio |
 
-* [x] Polymorphism
-
-    * Código: [`ClassPolymorphism.java`](src/main/java/com/felipe/backendlab/javacore/oop/ClassPolymorphism.java)
-
-* [ ] Encapsulation
-
-* [ ] Abstraction
-
-* [ ] Composition
-
-* [x] Interfaces
-- Código: [`InterfaceExample.java`](src/main/java/com/felipe/backendlab/javacore/oop/InterfaceExample.java)
-
-* [ ] Association
-
-* [ ] Aggregation
-
-* [x] JavaBeans
-- Código: [`JavaBeansExample.java`](src/main/java/com/felipe/backendlab/javacore/oop/JavaBeansExample.java)
-
-* [x] JavaExceptions
-- Código: [`JavaExceptions.java`](src/main/java/com/felipe/backendlab/javacore/oop/JavaExceptions.java)
-- Código: [`JavaExceptionsExample.java`](src/main/java/com/felipe/backendlab/javacore/oop/JavaExceptionsExample.java)
-
----
-
-## Collections
-- Package: [`collections`](src/main/java/com/felipe/backendlab/javacore/collections)
-
-* [x] ArrayList
-
-    * Código: [`ArrayListExample.java`](src/main/java/com/felipe/backendlab/javacore/collections/ArrayListExample.java)
-
-* [x] HashSet
-
-    * Código: [`SetsExample.java`](src/main/java/com/felipe/backendlab/javacore/collections/SetsExample.java)
-
-* [] HashMap
-
-    * Código: [`HashMapExample.java`](src/main/java/com/felipe/backendlab/javacore/collections/HashMapExample.java)
-
-* [] LinkedList
-
-    * Código: [`LinkedListExample.java`](src/main/java/com/felipe/backendlab/javacore/collections/LinkedListExample.java)
-
-* [x] Queue
-
-    * Código: [`QueueExample.java`](src/main/java/com/felipe/backendlab/javacore/collections/QueueExample.java)
-
-* [x] Stack
-
-    * Código: [`StackExample.java`](src/main/java/com/felipe/backendlab/javacore/collections/StackExample.java)
-
-* [x] TreeMap
-
-    * Código: [`TreeMapExample.java`](src/main/java/com/felipe/backendlab/javacore/collections/TreeMapExample.java)
-
-* [ ] TreeSet
-
-* [ ] PriorityQueue
-
-* [ ] Deque
-
-* [ ] ConcurrentHashMap
-
----
-
-## Concurrency
-
-* [x] Thread
-
-    * Código: [`ThreadExample.java`](src/main/java/com/felipe/backendlab/javacore/concurrency/ThreadExample.java)
-
-* [x] Runnable
-
-    * Código: [`RunnableExample.java`](src/main/java/com/felipe/backendlab/javacore/concurrency/RunnableExample.java)
-
-* [x] ExecutorService
-
-    * Código: [`ExecutorServiceExample.java`](src/main/java/com/felipe/backendlab/javacore/concurrency/ExecutorServiceExample.java)
-
-* [x] CompletableFuture
-
-    * Código: [`CompletableFutureExample.java`](src/main/java/com/felipe/backendlab/javacore/concurrency/CompletableFutureExample.java)
-
-* [x] Synchronization
-
-    * Código: [`SynchronizationExample.java`](src/main/java/com/felipe/backendlab/javacore/concurrency/SynchronizationExample.java)
-
-* [ ] Callable
-
-* [ ] Future
-
-* [ ] Locks
-
-* [ ] Atomic Variables
-
-* [ ] Concurrent Collections
-
-* [ ] Race Conditions
-
-* [ ] Deadlocks
-
-* [ ] Thread Pools
-
-* [ ] Virtual Threads
-
----
-
-## Streams
-
-* [x] map
-
-    * Código: [`MapExample.java`](src/main/java/com/felipe/backendlab/javacore/streams/MapExample.java)
-
-* [x] filter
-
-    * Código: [`FilterExample.java`](src/main/java/com/felipe/backendlab/javacore/streams/FilterExample.java)
-
-* [x] flatMap
-
-    * Código: [`FlatMapExample.java`](src/main/java/com/felipe/backendlab/javacore/streams/FlatMapExample.java)
-
-* [x] reduce
-
-    * Código: [`ReduceExample.java`](src/main/java/com/felipe/backendlab/javacore/streams/ReduceExample.java)
-
-* [x] collect
-
-    * Código: [`CollectExample.java`](src/main/java/com/felipe/backendlab/javacore/streams/CollectExample.java)
-
-* [ ] sorted
-
-* [ ] distinct
-
-* [ ] peek
-
-* [ ] groupingBy
-
-* [ ] partitioningBy
-
-* [ ] Optional
-
-* [ ] Parallel Streams
-
----
-
-## Language
-
-Características propias del lenguaje Java.
-
-* [x] Varargs
-
-    * Código: [`VarargsExample.java`](src/main/java/com/felipe/backendlab/javacore/language/VarargsExample.java)
-
-* [ ] Generics
-
-* [ ] Enums
-
-* [ ] Annotations
-
-* [ ] Records
-
-* [ ] Sealed Classes
-
-* [ ] Nested Classes
-
-* [ ] Inner Classes
-
-* [ ] Static Members
-
-* [ ] Final
-
-* [ ] Exception Handling
-
-* [ ] Checked vs Unchecked Exceptions
-
-* [ ] Autoboxing / Unboxing
-
-* [ ] Immutable Objects
-
----
-
-# 🧩 Design Patterns
-
-Patrones de diseño orientados a resolver problemas recurrentes de diseño de software.
-
-## Creational Patterns
-
-* [x] Builder
-
-    * Código: [`BuilderExample.java`](src/main/java/com/felipe/backendlab/designpatterns/BuilderExample.java)
-
-* [x] Factory
-
-    * Código: [`FactoryExample.java`](src/main/java/com/felipe/backendlab/designpatterns/FactoryExample.java)
-
-* [x] Singleton
-
-    * Código: [`SingletonExample.java`](src/main/java/com/felipe/backendlab/designpatterns/SingletonExample.java)
-
-* [ ] Abstract Factory
-
-* [ ] Prototype
-
-## Structural Patterns
-
-* [ ] Adapter
-
-* [ ] Decorator
-
-* [ ] Facade
-
-* [ ] Proxy
-
-* [ ] Composite
-
-* [ ] Bridge
-
-* [ ] Flyweight
-
-## Behavioral Patterns
-
-* [x] Observer
-
-    * Código: [`ObserverExample.java`](src/main/java/com/felipe/backendlab/designpatterns/ObserverExample.java)
-
-* [x] Strategy
-
-    * Código: [`StrategyExample.java`](src/main/java/com/felipe/backendlab/designpatterns/StrategyExample.java)
-
-* [ ] Chain of Responsibility
-
-* [ ] Command
-
-* [ ] Template Method
-
-* [ ] State
-
-* [ ] Mediator
-
-* [ ] Iterator
-
-* [ ] Visitor
-
-* [ ] Memento
-
-* [ ] Interpreter
-
----
-
-# 🧱 SOLID
-
-Principios utilizados para desarrollar software mantenible, extensible y con bajo acoplamiento.
-
-* [x] Single Responsibility Principle
-
-    * Código: [`SingleResponsibilityExample.java`](src/main/java/com/felipe/backendlab/solid/SingleResponsibilityExample.java)
-
-* [x] Open/Closed Principle
-
-    * Código: [`OpenClosedExample.java`](src/main/java/com/felipe/backendlab/solid/OpenClosedExample.java)
-
-* [x] Liskov Substitution Principle
-
-    * Código: [`LiskovExample.java`](src/main/java/com/felipe/backendlab/solid/LiskovExample.java)
-
-* [x] Interface Segregation Principle
-
-    * Código: [`InterfaceSegregationExample.java`](src/main/java/com/felipe/backendlab/solid/InterfaceSegregationExample.java)
-
-* [x] Dependency Inversion Principle
-
-    * Código: [`DependencyInversionExample.java`](src/main/java/com/felipe/backendlab/solid/DependencyInversionExample.java)
-
----
-
-# 🧮 Algorithms
-
-Algoritmos y estructuras utilizadas para fortalecer la resolución de problemas, el análisis de complejidad y el pensamiento algorítmico.
-
-* [ ] Big O Notation
-
-* [ ] Arrays
-
-* [ ] Strings
-
-* [ ] Searching
-
-* [ ] Sorting
-
-* [ ] Recursion
-
-* [ ] Two Pointers
-
-* [ ] Sliding Window
-
-* [ ] Hashing
-
-* [ ] Stack / Queue Problems
-
-* [ ] Trees
-
-* [ ] Graphs
-
-* [ ] Dynamic Programming
-
----
-
-# 🏗️ Architecture
-
-Conceptos relacionados con arquitectura y diseño de sistemas.
-
-* [ ] Layered Architecture
-
-* [ ] Clean Architecture
-
-* [ ] Hexagonal Architecture
-
-* [ ] Onion Architecture
-
-* [ ] Domain-Driven Design
-
-* [ ] Modular Monolith
-
-* [ ] Microservices
-
-* [ ] Event-Driven Architecture
-
-* [ ] CQRS
-
-* [ ] Event Sourcing
-
-* [ ] Integration Patterns
-
-* [ ] API Gateway
-
-* [ ] Service Discovery
-
-* [ ] Circuit Breaker
-
-* [ ] Saga Pattern
-
-* [ ] Outbox Pattern
-
----
-
-# 🌱 Spring / Spring Boot
-
-Área destinada a experimentos y conceptos relacionados con Spring y Spring Boot.
-
-* [ ] Spring Core
-
-* [ ] Dependency Injection
-
-* [ ] IoC Container
-
-* [ ] Bean Lifecycle
-
-* [ ] Spring Boot
-
-* [ ] Spring MVC
-
-* [ ] Spring Security
-
-* [ ] Spring Data JPA
-
-* [ ] Hibernate
-
-* [ ] Transactions
-
-* [ ] Validation
-
-* [ ] Exception Handling
-
-* [ ] REST APIs
-
-* [ ] Actuator
-
----
-
-# 🗄️ Databases
-
-Conceptos relacionados con bases de datos relacionales y persistencia.
-
-* [ ] Relational Modeling
-
-* [ ] Normalization
-
-* [ ] Denormalization
-
-* [ ] Primary Keys
-
-* [ ] Foreign Keys
-
-* [ ] Indexes
-
-* [ ] Composite Indexes
-
-* [ ] Query Optimization
-
-* [ ] Execution Plans
-
-* [ ] Transactions
-
-* [ ] ACID
-
-* [ ] Isolation Levels
-
-* [ ] Locks
-
-* [ ] PostgreSQL
-
-* [ ] MySQL
-
-* [ ] SQL Server
-
----
-
-# 🧪 Testing
-
-* [ ] Unit Testing
-
-* [ ] Integration Testing
-
-* [ ] JUnit
-
-* [ ] Mockito
-
-* [ ] Testcontainers
-
-* [ ] Contract Testing
-
-* [ ] Test Pyramid
-
-* [ ] Test Doubles
-
-* [ ] Mock vs Stub vs Spy
-
----
-
-# 🐳 DevOps
-
-* [ ] Docker
-
-* [ ] Docker Compose
-
-* [ ] Git
-
-* [ ] Branching Strategies
-
-* [ ] CI/CD
-
-* [ ] Logging
-
-* [ ] Monitoring
-
-* [ ] Observability
-
-* [ ] Metrics
-
-* [ ] Distributed Tracing
-
----
-
-# 🎯 Interview
-
-Preguntas y ejercicios orientados a preparación para entrevistas técnicas.
-
-## Java
-
-* [ ] Java Core
-
-* [ ] OOP
-
-* [ ] Collections
-
-* [ ] Streams
-
-* [ ] Concurrency
-
-* [ ] JVM
-
-* [ ] Memory Management
-
-## Spring
-
-* [ ] Spring Core
-
-* [ ] Spring Boot
-
-* [ ] Spring Security
-
-* [ ] Spring Data
-
-* [ ] Transactions
-
-## SQL
-
-* [ ] Queries
-
-* [ ] Joins
-
-* [ ] Indexes
-
-* [ ] Transactions
-
-* [ ] Optimization
-
-## Architecture
-
-* [ ] Design Patterns
-
-* [ ] SOLID
-
-* [ ] Clean Architecture
-
-* [ ] System Design
-
-* [ ] Scalability
-
-* [ ] Distributed Systems
-
----
-
-# 🧪 Playground
-
-Área destinada a experimentos libres.
-
-A diferencia de las demás secciones, aquí se permite combinar múltiples conceptos.
-
-Ejemplos:
-
-```text
-playground/
-├── java/
-├── spring/
-├── architecture/
-└── database/
-```
-
-El `playground` puede utilizarse para:
-
-* Probar una idea.
-* Comparar implementaciones.
-* Realizar experimentos de performance.
-* Investigar el comportamiento de una API.
-* Combinar varios conceptos.
-* Crear prototipos antes de llevarlos a una implementación más estructurada.
-
-> Los experimentos que se conviertan en conocimiento consolidado deberían posteriormente trasladarse a su categoría correspondiente.
-
----
-
-# snackMachine
-```text
-> Proyecto maquina de snacks.
-
-Conceptos
-Este proyecto implmenta varios conceptos de OPP y collections.
-Es un proyecto pequeño, su utilizar probar conceptos.
-```
-
-
-# 📚 Convención para nuevos ejemplos
-
-Los ejemplos deben utilizar nombres descriptivos.
-
-Formato recomendado:
-
-```text
-<Concept>Example.java
-```
-
-Ejemplos:
-
-```text
-VarargsExample.java
-HashMapExample.java
-CompletableFutureExample.java
-BuilderExample.java
-DependencyInversionExample.java
-```
-
-Cada ejemplo debe intentar demostrar **un único concepto principal**.
-
-Cuando sea necesario combinar múltiples conceptos, utilizar `playground`.
-
----
-
-# 💡 Cómo estudiar un nuevo concepto
-
-Cada nuevo concepto debería seguir un ciclo práctico.
-
-## 1. Estudiar
-
-Comprender:
-
-* Qué problema resuelve.
-* Qué es.
-* Cómo funciona.
-* Cuándo utilizarlo.
-* Cuándo evitarlo.
-* Sus ventajas y desventajas.
-* Sus implicaciones de performance y diseño.
-
-## 2. Codificar
-
-Crear un ejemplo pequeño y aislado que permita observar el concepto.
-
-Ejemplo:
-
-```text
-javacore/
-└── language/
-    └── VarargsExample.java
-```
-
-## 3. Practicar
-
-Modificar el ejemplo, crear variantes y resolver ejercicios relacionados.
-
-El objetivo es dejar de depender del ejemplo original.
-
-## 4. Probar
-
-Validar el comportamiento mediante:
-
-* ejecución manual;
-* casos límite;
-* JUnit;
-* experimentos;
-* benchmarks cuando sea necesario.
-
-## 5. Analizar
-
-Preguntarse:
-
-* ¿Entiendo realmente lo que está sucediendo?
-* ¿Podría implementarlo nuevamente sin consultar el ejemplo?
-* ¿Puedo explicar por qué funciona?
-* ¿Conozco sus limitaciones?
-* ¿Sé cuándo utilizarlo y cuándo no?
-* ¿Puedo responder una pregunta de entrevista sobre el tema?
-
-## 6. Repetir
-
-Si alguna respuesta es negativa:
-
-```text
-Analizar
-   ↓
-Identificar la brecha
-   ↓
-Volver a estudiar
-   ↓
-Modificar el código
-   ↓
-Practicar
-   ↓
-Probar nuevamente
-```
-
----
-
-# 📁 Estructura actual
-
-```text
-backend-lab/
-│
-├── README.md
-├── .gitignore
-├── pom.xml
-│
-└── src/
-    ├── main/
-    │   ├── java/
-    │   │   └── com/felipe/backendlab/
-    │   │       ├── algorithms/
-    │   │       ├── designpatterns/
-    │   │       ├── javacore/
-    │   │       │   ├── abstraction/
-    │   │       │   ├── collections/
-    │   │       │   ├── concurrency/
-    │   │       │   ├── language/
-    │   │       │   ├── oop/
-    │   │       │   └── streams/
-    │   │       ├── interview/
-    │   │       ├── playground/
-    │   │       └── solid/
-    │   │
-    │   └── resources/
-    │
-    └── test/
-        └── java/
-```
-
----
-
-# 🚀 Roadmap
-
-El laboratorio evoluciona progresivamente con foco inicial en **Java Backend Development**:
-
-```text
-Java Core
-    ↓
-Clean Code + SOLID
-    ↓
-Design Patterns
-    ↓
-Testing
-    ↓
-Spring Boot
-    ↓
-Persistence / JPA / Hibernate
-    ↓
-REST APIs / Security
-    ↓
-Architecture
-    ↓
-Concurrency / Performance
-    ↓
-Distributed Systems
-    ↓
-Docker / CI/CD / Observability
-    ↓
-System Design
-```
-
-La prioridad no es completar rápidamente todas las categorías.
-
-La prioridad es alcanzar **comprensión profunda y capacidad de aplicación práctica**.
-
----
-
-# 📌 Regla principal
-
-> **No se considera aprendido un concepto únicamente por haberlo leído.**
-
-El objetivo es avanzar desde:
-
-```text
-Leer
- ↓
-Comprender
- ↓
-Codificar
- ↓
-Practicar
- ↓
-Probar
- ↓
-Analizar
- ↓
-Explicar
- ↓
-Aplicar
-```
-
-hasta poder utilizar el conocimiento de forma independiente en problemas reales.
-
-> **El código es la documentación práctica del aprendizaje.**

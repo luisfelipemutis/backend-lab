@@ -1,4 +1,4 @@
-package com.felipe.backendlab.javacore.oop;
+package com.felipe.backendlab.javacore.exceptions;
 
 /**
  * JAVA EXCEPTIONS

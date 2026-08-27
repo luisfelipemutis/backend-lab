@@ -1,6 +1,4 @@
-package com.felipe.backendlab.playground.snackMachineFile.service;
-
-import com.felipe.backendlab.playground.snackMachineFile.domain.Snack;
+package com.felipe.backendlab.playground.snackmachinefile.service;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -10,6 +8,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.felipe.backendlab.playground.snackmachinefile.domain.Snack;
 
 public class ServiceSnacksFiles implements IServiceSnacks {
 

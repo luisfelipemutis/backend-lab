@@ -1,4 +1,4 @@
-package com.felipe.backendlab.javacore.oop;
+package com.felipe.backendlab.javacore.exceptions;
 
 public class JavaExceptionsExample {
     public static void main(String[] args) {

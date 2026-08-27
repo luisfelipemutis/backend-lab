@@ -1,4 +1,4 @@
-package com.felipe.backendlab.javacore.oop;
+package com.felipe.backendlab.playground.sales;
 
 public class ExampleSalesSystem {
 

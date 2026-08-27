@@ -1,4 +1,4 @@
-package com.felipe.backendlab.playground.snackMachineFile.domain;
+package com.felipe.backendlab.playground.snackmachinefile.domain;
 
 import java.io.Serializable;
 import java.util.Objects;

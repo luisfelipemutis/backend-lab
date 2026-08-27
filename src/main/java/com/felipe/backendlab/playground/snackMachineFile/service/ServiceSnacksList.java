@@ -1,9 +1,9 @@
-package com.felipe.backendlab.playground.snackMachineFile.service;
-
-import com.felipe.backendlab.playground.snackMachineFile.domain.Snack;
+package com.felipe.backendlab.playground.snackmachinefile.service;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.felipe.backendlab.playground.snackmachinefile.domain.Snack;
 
 public class ServiceSnacksList implements IServiceSnacks {
 

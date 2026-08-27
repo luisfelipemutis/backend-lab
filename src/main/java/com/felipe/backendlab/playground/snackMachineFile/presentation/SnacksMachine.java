@@ -1,12 +1,12 @@
-package com.felipe.backendlab.playground.snackMachineFile.presentation;
-
-import com.felipe.backendlab.playground.snackMachineFile.domain.Snack;
-import com.felipe.backendlab.playground.snackMachineFile.service.IServiceSnacks;
-import com.felipe.backendlab.playground.snackMachineFile.service.ServiceSnacksFiles;
+package com.felipe.backendlab.playground.snackmachinefile.presentation;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import com.felipe.backendlab.playground.snackmachinefile.domain.Snack;
+import com.felipe.backendlab.playground.snackmachinefile.service.IServiceSnacks;
+import com.felipe.backendlab.playground.snackmachinefile.service.ServiceSnacksFiles;
 
 public class SnacksMachine {
 
@@ -17,7 +17,7 @@ public class SnacksMachine {
     private static void maquinaSnacks() {
         boolean exit = false;
         var sc = new Scanner(System.in);
-        //IServiceSnacks serviceSnacks = new ServiceSnacksList();
+        // IServiceSnacks serviceSnacks = new ServiceSnacksList();
         IServiceSnacks serviceSnacks = new ServiceSnacksFiles();
 
         // Cración de la lista productos tipo snack.
@@ -32,7 +32,7 @@ public class SnacksMachine {
             } catch (Exception e) {
                 System.out.println("Ocurrio un error: " + e.getMessage());
             } finally {
-                System.out.println();//Imprime un salto de linea con cada interación.
+                System.out.println();// Imprime un salto de linea con cada interación.
             }
         }
     }
@@ -68,7 +68,8 @@ public class SnacksMachine {
     }
 
     private static void buySnack(Scanner sc, List<Snack> products, IServiceSnacks serviceSnacks) {
-        System.out.print("Que snack quieres comprar (id)?"); // con print se pide el valor en la misma linea sin hacer salto de linea.
+        System.out.print("Que snack quieres comprar (id)?"); // con print se pide el valor en la misma linea sin hacer
+                                                             // salto de linea.
         var idSnack = Integer.parseInt(sc.nextLine());
         // validar que el snack exista en la lista de snacks
         var snackFound = false;
