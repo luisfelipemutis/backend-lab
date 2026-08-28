@@ -146,3 +146,7 @@ Subpaquetes actuales:
 | OpenClosedExample | [src/main/java/com/felipe/backendlab/solid/OpenClosedExample.java](src/main/java/com/felipe/backendlab/solid/OpenClosedExample.java) | Vacia | Placeholder de estudio |
 | SingleResponsibilityExample | [src/main/java/com/felipe/backendlab/solid/SingleResponsibilityExample.java](src/main/java/com/felipe/backendlab/solid/SingleResponsibilityExample.java) | Vacia | Placeholder de estudio |
 
+### Architecture
+
+- [src/main/java/com/felipe/backendlab/architecture/layered](src/main/java/com/felipe/backendlab/architecture/layered)
+
