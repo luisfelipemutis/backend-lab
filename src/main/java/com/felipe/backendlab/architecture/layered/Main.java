@@ -43,7 +43,6 @@ Objetivo del ejemplo:
 */
 
 public class Main {
-
     public static void main(String[] args) {
         BookController bookController = new BookController();
         bookController.startApplication();

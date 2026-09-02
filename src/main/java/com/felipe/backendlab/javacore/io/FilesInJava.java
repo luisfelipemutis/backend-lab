@@ -36,7 +36,7 @@ public class FilesInJava {
 
     // Método para leer el archivo.
     private static void readFile(String fileName) {
-        File file = new File(fileName);
+        //File file = new File(fileName);
         try {
             System.out.println("Contenido del archivo: ");
             //Abrir el archivo para lectura
