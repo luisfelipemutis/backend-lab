@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    Logback configuration for the ZonaFitSpring application.
+    This configuration defines a console appender and sets the root logging level to INFO.
+
+    %msg: Patron - solamente muestra el mensaje que se envía a consola.
+ -->
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>-->
+            <pattern>%msg</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>
