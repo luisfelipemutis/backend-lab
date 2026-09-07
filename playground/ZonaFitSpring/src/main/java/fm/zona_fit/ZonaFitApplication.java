@@ -13,7 +13,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.CommandLineRunner;
 
-@SpringBootApplication
+// Aplicacion de consola para gestionar clientes de un gimnasio (zona fit) utilizando Spring Boot y un servicio de clientes.
+// Para utilizar este flujo, descomentar la anotación @SpringBootApplication
+// y comentar la anotación @SpringBootApplication en la clase ZonaFitSwing.java
+//@SpringBootApplication
 public class ZonaFitApplication implements CommandLineRunner {
 
 	@Autowired
