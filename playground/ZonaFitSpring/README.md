@@ -17,6 +17,7 @@ Proyecto de practica para estudiar Spring Boot mediante una aplicacion de gestio
 - Spring Data JPA
 - JPA
 - Hibernate
+- Swing (interfaz grafica)
 - MySQL
 - Lombok
 - Maven
@@ -40,9 +41,11 @@ Entre sus capacidades se encuentran:
 
 Spring Boot simplifica el uso de Spring Framework mediante auto configuracion, dependencias agrupadas en starters y convenciones que reducen la configuracion inicial.
 
-La clase `ZonaFitApplication` inicia la aplicacion. La anotacion `@SpringBootApplication` habilita la configuracion, la auto configuracion y el escaneo de componentes dentro del paquete `fm.zona_fit`.
+Actualmente la aplicacion principal es `ZonaFitSwing`. La anotacion `@SpringBootApplication` habilita la configuracion, la auto configuracion y el escaneo de componentes dentro del paquete `fm.zona_fit`.
 
-La aplicacion implementa `CommandLineRunner`, por lo que muestra un menu de consola despues de iniciar el contexto de Spring. Actualmente no es una API REST y se ejecuta con:
+La aplicacion ya no trabaja como menu de consola. Se refactorizo el inicio para levantar Spring con `SpringApplicationBuilder`, mantener activo el contexto con JPA/Hibernate y lanzar la ventana Swing (`ZonaFitForm`) para ejecutar el CRUD de clientes.
+
+Para ejecutar:
 
 ```powershell
 .\mvnw.cmd spring-boot:run
@@ -55,15 +58,13 @@ La inyeccion de dependencias permite que Spring cree los objetos y conecte sus d
 En este proyecto:
 
 ```text
-ZonaFitApplication
-		-> IClienteServicio
-		-> ClienteServicio
+ZonaFitSwing
+		-> ZonaFitForm
+		-> IClienteServicio / ClienteServicio
 		-> ClienteRepository
 ```
 
-`ClienteServicio` esta registrado con `@Service` y recibe un `ClienteRepository` mediante `@Autowired`. `ClienteRepository` es creado automaticamente por Spring Data JPA.
-
-Actualmente se utiliza inyeccion sobre un atributo. Un proximo ejercicio recomendado es reemplazarla por inyeccion mediante constructor, que hace las dependencias obligatorias y facilita las pruebas.
+`ClienteServicio` esta registrado con `@Service` y recibe un `ClienteRepository` mediante inyeccion por constructor. `ZonaFitForm` es un `@Component` de Spring y tambien recibe el servicio por constructor para poder inicializar y usar la UI con acceso a datos.
 
 ## JPA e Hibernate
 
@@ -98,14 +99,20 @@ public class Cliente {
 
 `IClienteServicio` define el contrato de operaciones y `ClienteServicio` implementa la logica de acceso a clientes. Esta separacion permite cambiar la implementacion sin acoplar la aplicacion directamente al repositorio.
 
-### Aplicacion
+### Interfaz grafica (Swing)
 
-`ZonaFitApplication` inicia Spring Boot, recibe el servicio inyectado y contiene el menu de consola para listar, consultar, crear, modificar y eliminar clientes.
+`ZonaFitForm` es la ventana principal de escritorio (`JFrame`). Desde esta UI se listan, agregan, actualizan y eliminan clientes usando el servicio, con JPA/Hibernate funcionando en el mismo contexto de Spring.
+
+### Arranque de aplicacion
+
+`ZonaFitSwing` inicia Spring Boot en modo no web (`WebApplicationType.NONE` y `headless(false)`) y luego muestra la ventana con `SwingUtilities.invokeLater`.
+
+`ZonaFitApplication` (menu por consola) se conserva en el proyecto como referencia de practica, pero no es el flujo principal actual.
 
 ## Flujo de una operacion
 
 ```text
-Menu de consola
+ZonaFitForm (Swing)
 	-> ClienteServicio
 	-> ClienteRepository
 	-> Spring Data JPA
@@ -120,7 +127,7 @@ La configuracion se encuentra en `src/main/resources/application.properties`:
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/zona_fit_db
 spring.datasource.username=root
-spring.datasource.password=root
+spring.datasource.******
 spring.jpa.hibernate.ddl-auto=none
 spring.main.web-application-type=none
 ```
@@ -187,5 +194,3 @@ java -jar .\target\zona_fit-0.0.1-SNAPSHOT.jar
 - Paginacion y ordenamiento.
 - Migraciones con Flyway o Liquibase.
 - Spring Security y Actuator.
-
-
