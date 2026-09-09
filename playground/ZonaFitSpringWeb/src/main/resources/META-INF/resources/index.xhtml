@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+h:html is a custom tag that represents the HTML document. It is used in JavaServer Faces (JSF)
+
+xmlns = xml namescape - nombre donde se encuentran estos elementos.
+-->
+<h:html xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:f="http://xmlns.jcp.org/jsf/core"
+        xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Zona Fit (GYM)</title>
+
+        <!-- PrimeFlex is a CSS utility library that provides a set of pre-defined classes for common CSS tasks, such as layout,
+        spacing, and typography. It is designed to work with the PrimeFaces component library,
+        which is a popular UI framework for JavaServer Faces (JSF) applications. -->
+        <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/primeflex.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/themes/primeone-dark.css"/>
+    </h:head>
+    <h:body>
+
+        <div class="card">
+            <h:form id="forma-clientes">
+                <p:growl id="mensajes" showDetail="false"/>
+                <!-- Menubar -->
+                <div class="card">
+                    <p:menubar>
+                        <p:menuitem value="Inicio" icon="pi pi-fw pi-user"
+                                    update=":forma-clientes:clients-table"
+                                    actionListener="#{indexControlador.loadData}"/>
+                        <p:menuitem value="Nuevo cliente" icon="pi pi-fw pi-plus"
+                                    actionListener="#{indexControlador.addClient}"
+                                    update=":forma-modal:client-vtn"
+                                    oncomplete="PF('ventanaModalCliente').show()"/>
+                    </p:menubar>
+                </div>
+                <!-- DataTable -->
+                <div class="card">
+                    <p:dataTable value="#{indexControlador.clients}" var="client"
+                                 id="clients-table" widgetVar="clientsTable">
+
+                        <f:facet name="header">
+                            <div class="flex justify-content-center flex-wrap card-container yellow-container">
+                                <div class="flex align-items-center justify-content-center w-20rem
+                                    h-4rem bg-yellow-500 font-bold text-gray-900 border-round m-2">
+                                    <h3>Welcome to Zona Fit (GYM)</h3>
+                                </div>
+                            </div>
+                        </f:facet>
+
+                        <p:column headerText="Id">
+                            <h:outputText value="#{client.id}"/>
+                        </p:column>
+                        <p:column headerText="Nombre">
+                            <h:outputText value="#{client.nombre}"/>
+                        </p:column>
+                        <p:column headerText="Apellido">
+                            <h:outputText value="#{client.apellido}"/>
+                        </p:column>
+                        <p:column headerText="Membresia">
+                            <h:outputText value="#{client.membresia}"/>
+                        </p:column>
+
+                        <p:column>
+                            <p:commandButton value="Editar" icon="pi pi-pencil"
+                                             update=":forma-modal:client-vtn"
+                                             process="@this"
+                                             oncomplete="PF('ventanaModalCliente').show()"
+                                             class="ui-button-primary"
+                                             style="margin-right: .5rem">
+
+                                <!-- Con esta propiedad se setea el valor del cliente a la varible del controlador. -->
+                                <f:setPropertyActionListener
+                                        value="#{client}"
+                                        target="#{indexControlador.selectedClient}"/>
+                                <p:resetInput target=":forma-modal:client-vtn"/>
+
+                            </p:commandButton>
+
+                            <p:commandButton value="Eliminar" class="ui-button-danger"
+                                             icon="pi pi-trash" process="@this"
+                                             oncomplete="PF('deleteClientVtn').show()">
+                                <f:setPropertyActionListener
+                                        value="#{client}"
+                                        target="#{indexControlador.selectedClient}"/>
+                            </p:commandButton>
+                        </p:column>
+
+                    </p:dataTable>
+                </div>
+            </h:form>
+            <!-- Ventana emergente para agregar un cliente -->
+            <h:form id="forma-modal">
+                <!-- Ventana emergente para agregar o editar un cliente -->
+                <p:dialog header="Detalles Cliente" showEffect="fade"
+                          modal="true" widgetVar="ventanaModalCliente"
+                          responsive="true">
+                    <p:outputPanel id="client-vtn" class="ui-fluid">
+                        <!-- Campo nombre -->
+                        <div class="field">
+                            <p:outputLabel for="nombre"> Nombre</p:outputLabel>
+                            <p:inputText id="nombre"
+                                         value="#{indexControlador.selectedClient.nombre}"
+                                         required="true"/>
+                        </div>
+                        <!-- Campo apellido -->
+                        <div class="field">
+                            <p:outputLabel for="apellido"> Apellido</p:outputLabel>
+                            <p:inputText id="apellido"
+                                         value="#{indexControlador.selectedClient.apellido}"/>
+                        </div>
+                        <!-- Campo membresia -->
+                        <div class="field">
+                            <p:outputLabel for="membresia"> Membresia</p:outputLabel>
+                            <p:inputNumber id="membresia"
+                                           value="#{indexControlador.selectedClient.membresia}"
+                                           required="true"/>
+                        </div>
+                    </p:outputPanel>
+                    <f:facet name="footer">
+                        <p:commandButton value="Guardar" icon="pi pi-check"
+                                         process="client-vtn @this"
+                                         actionListener="#{indexControlador.saveClient}"/>
+                        <p:commandButton value="Cancelar" icon="pi pi-times"
+                                         onclick="PF('ventanaModalCliente').hide()"
+                                         class="ui-button-secondary" type="button"/>
+                    </f:facet>
+                </p:dialog>
+
+                <!-- Ventana emergente para eliminar un cliente -->
+                <p:confirmDialog widgetVar="deleteClientVtn"
+                                 showEffect="fade" width="300"
+                                 message="¿Está seguro de eliminar el cliente?"
+                                 header="confirmar" severity="warn">
+                    <p:commandButton value="Si" icon="pi pi-check"
+                                     process="@this" actionListener="#{indexControlador.deleteClient}"
+                                     oncomplete="PF('deleteClientVtn').hide()"/>
+                    <p:commandButton value="No" type="button"
+                                     styleClass="ui-button-secondary" icon="pi pi-times"
+                                     onclick="PF('deleteClientVtn').hide()"/>
+                </p:confirmDialog>
+            </h:form>
+        </div>
+
+    </h:body>
+</h:html>
