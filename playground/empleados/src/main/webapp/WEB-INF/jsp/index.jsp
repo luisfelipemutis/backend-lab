@@ -1,3 +1,5 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <%@ include file="common/header.jsp" %>
 
 <%@ include file="common/navbar.jsp" %>
@@ -46,7 +48,11 @@
                                          value="${employee.idEmpleado}"/>
                             </c:url>
                         </c:set>
-                        <a href="${urlDelete}" class="btn btn-danger btn-sm me-3">
+                        <a href="#"
+                           class="btn btn-danger btn-sm me-3"
+                           data-bs-toggle="modal"
+                           data-bs-target="#deleteEmployeeModal"
+                           data-delete-url="${urlDelete}">
                             Eliminar
                         </a>
                     </td>
@@ -57,7 +63,40 @@
         </table>
     </div>
 
+    <div class="modal fade" id="deleteEmployeeModal" tabindex="-1" aria-labelledby="deleteEmployeeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteEmployeeModalLabel">Confirmacion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Está seguro de que desea eliminar este empleado?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <a href="#" id="confirmDeleteButton" class="btn btn-danger">Eliminar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
+
+<script>
+    const deleteEmployeeModal = document.getElementById('deleteEmployeeModal');
+    const confirmDeleteButton = document.getElementById('confirmDeleteButton');
+
+    deleteEmployeeModal.addEventListener('show.bs.modal', function (event) {
+        const deleteButton = event.relatedTarget;
+        const deleteUrl = deleteButton.getAttribute('data-delete-url');
+        confirmDeleteButton.setAttribute('href', deleteUrl);
+    });
+
+    deleteEmployeeModal.addEventListener('hidden.bs.modal', function () {
+        confirmDeleteButton.setAttribute('href', '#');
+    });
+</script>
 
 
 <%@ include file="common/footer.jsp" %>
