@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- Header section including Bootstrap CSS and page title -->
+<head th:replace="~{fragments/header::header-section('Editar Contacto')}"/>
+<body>
+
+<!-- Div container for the navbar -->
+<div th:replace="~{fragments/navbar::navbar-section}"></div>
+
+<div class="container">
+    <div class="container text-center" style="margin:30px">
+        <h3>Editar Contacto</h3>
+    </div>
+    <div class="container">
+        <form action="/editar" method="post" th:object="${contact}">
+
+            <!-- Se muestra el ID del contacto de manera oculta para poder editarlo -->
+            <input type="hidden" th:field="*{id}"/>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre"
+                       aria-describedby="emailHelp" name="nombre" required th:field="*{nombre}">
+            </div>
+            <div class="mb-3">
+                <label for="celular" class="form-label">Celular</label>
+                <input type="text" class="form-control"
+                       id="celular" name="celular" th:field="*{celular}">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control"
+                       id="email" name="email" th:field="*{email}">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-warning btn-sm me-3">Editar Contacto</button>
+                <a href="/" class="btn btn-danger btn-sm">Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Footer section including Bootstrap JS - selection section for include -->
+<div th:replace="~{fragments/footer::footer-section}"/>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- Header section including Bootstrap CSS and page title -->
+<head th:replace="~{fragments/header::header-section('Sistema de Contactos')}"/>
+
+<body>
+
+<!-- Div container for the navbar -->
+<div th:replace="~{fragments/navbar::navbar-section}"></div>
+
+<!-- Div container table -->
+<div class="container">
+    <div class="container text-center" style="margin:30px">
+        <h3>Sistema de Contactos</h3>
+    </div>
+
+    <div class="container">
+        <table class="table table-striped table-hover align-middle table-bordered">
+            <thead class="table-dark text-center">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Celular</th>
+                <th scope="col">Email</th>
+                <th scope="col">Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="contact: ${contacts}">
+                <th th:text="${contact.id}" scope="row"></th>
+                <td th:text="${contact.nombre}"></td>
+                <td th:text="${contact.celular}"></td>
+                <td th:text="${contact.email}"></td>
+                <td class="text-center">
+                    <div class="container">
+                        <!-- Url con thymeleaf -->
+                        <a th:href="@{/editar/{id}(id=${contact.id})}"
+                           class="btn btn-warning btn-sm me-3"> Editar </a>
+                        <a th:href="@{/eliminar/{id}(id=${contact.id})}"
+                           class="btn btn-danger btn-sm">Eliminar</a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<!-- Footer section including Bootstrap JS - selection section for include -->
+<div th:replace="~{fragments/footer::footer-section}"/>
+
+</body>
+
+</html>
