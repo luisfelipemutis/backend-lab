@@ -1,6 +1,14 @@
 package com.felipe.backendlab.javacore.oop;
 
-// Herencia
+/*
+ *
+ * Herencia en Java (Java Inheritance)
+ *
+ * La herencia es un principio fundamental de la programación orientada a objetos (OOP) que permite a una clase
+ *   (llamada clase hija o subclase) heredar propiedades y comportamientos (métodos) de otra clase (llamada clase padre o superclase).
+ *   Esto promueve la reutilización del código y facilita la creación de jerarquías de clases.
+ *
+ * */
 public class ClassInheritance {
 
     public static void main(String[] args) {

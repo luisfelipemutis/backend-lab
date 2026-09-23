@@ -2,6 +2,16 @@ package com.felipe.backendlab.javacore.language.staticcontext;
 
 public class StaticAndDynamicContext {
 
+    /*
+     *
+     * Contexto estatico: pertenece a la clase, se crea una sola vez y se comparte entre todos los objetos de la clase.
+     *  No puede acceder a variables de contexto dinamico, ya que no sabe a que objeto se refiere.
+     *
+     * Contexto dinamico: pertenece al objeto, se crea una vez por cada objeto y no se comparte entre los objetos de la clase.
+     *  Puede acceder a variables de contexto estatico, ya que estas pertenecen a la clase y no al objeto.
+     *
+     * */
+
     public static void main(String[] args) {
         // Creación de objeto persona.
         Person persona = new Person("Luis", "Mutis");
@@ -30,6 +40,4 @@ class Person {
         this.lastName = lastName;
         count++;
     }
-
-
 }

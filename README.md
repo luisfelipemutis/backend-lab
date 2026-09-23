@@ -43,6 +43,7 @@ Laboratorio personal para estudiar Java backend de forma practica. Este reposito
 
 | Clase | Archivo | Estado | Comentario |
 |---|---|---|---|
+| ArrayExample | [src/main/java/com/felipe/backendlab/javacore/collections/ArrayExample.java](src/main/java/com/felipe/backendlab/javacore/collections/ArrayExample.java) | Implementada | Arreglos nativos, longitud, iteracion y matrices |
 | ArrayListExample | [src/main/java/com/felipe/backendlab/javacore/collections/ArrayListExample.java](src/main/java/com/felipe/backendlab/javacore/collections/ArrayListExample.java) | Implementada | Ejemplo funcional |
 | HashMapExample | [src/main/java/com/felipe/backendlab/javacore/collections/HashMapExample.java](src/main/java/com/felipe/backendlab/javacore/collections/HashMapExample.java) | Implementada | Ejemplo funcional |
 | HashSetExample | [src/main/java/com/felipe/backendlab/javacore/collections/HashSetExample.java](src/main/java/com/felipe/backendlab/javacore/collections/HashSetExample.java) | Vacia | Placeholder de estudio |
@@ -72,6 +73,11 @@ Laboratorio personal para estudiar Java backend de forma practica. Este reposito
 
 | Clase | Archivo | Estado | Comentario |
 |---|---|---|---|
+| AccessModifiersExample | [src/main/java/com/felipe/backendlab/javacore/language/AccessModifiersExample.java](src/main/java/com/felipe/backendlab/javacore/language/AccessModifiersExample.java) | Implementada | Modificadores de acceso public/private/default/protected |
+| EnumsExample | [src/main/java/com/felipe/backendlab/javacore/language/EnumsExample.java](src/main/java/com/felipe/backendlab/javacore/language/EnumsExample.java) | Implementada | Enumeraciones con descripcion por constante |
+| InitializerBlock | [src/main/java/com/felipe/backendlab/javacore/language/InitializerBlock.java](src/main/java/com/felipe/backendlab/javacore/language/InitializerBlock.java) | Implementada | Bloques estaticos y dinamicos con orden de ejecucion |
+| NonAccessModifiersExample | [src/main/java/com/felipe/backendlab/javacore/language/NonAccessModifiersExample.java](src/main/java/com/felipe/backendlab/javacore/language/NonAccessModifiersExample.java) | Implementada | final, abstract, static, transient, synchronized, volatile |
+| StaticKeywordExample | [src/main/java/com/felipe/backendlab/javacore/language/StaticKeywordExample.java](src/main/java/com/felipe/backendlab/javacore/language/StaticKeywordExample.java) | Implementada | Ejemplo de static en atributos, metodos y bloques |
 | VarargsExample | [src/main/java/com/felipe/backendlab/javacore/language/VarargsExample.java](src/main/java/com/felipe/backendlab/javacore/language/VarargsExample.java) | Implementada | Varargs |
 
 #### Package com.felipe.backendlab.javacore.oop
@@ -83,6 +89,7 @@ Laboratorio personal para estudiar Java backend de forma practica. Este reposito
 | ClassInheritance | [src/main/java/com/felipe/backendlab/javacore/oop/ClassInheritance.java](src/main/java/com/felipe/backendlab/javacore/oop/ClassInheritance.java) | ClassInheritance, Animal, Perro | Implementada | Herencia |
 | ClassPolymorphism | [src/main/java/com/felipe/backendlab/javacore/oop/ClassPolymorphism.java](src/main/java/com/felipe/backendlab/javacore/oop/ClassPolymorphism.java) | ClassPolymorphism, Animal1, Perro1, Cat1 | Implementada | Polimorfismo |
 | ExampleSalesSystem | [src/main/java/com/felipe/backendlab/javacore/oop/ExampleSalesSystem.java](src/main/java/com/felipe/backendlab/javacore/oop/ExampleSalesSystem.java) | ExampleSalesSystem, Order, Product | Implementada | Mini dominio de ventas |
+| SuperKeywordExample | [src/main/java/com/felipe/backendlab/javacore/oop/SuperKeywordExample.java](src/main/java/com/felipe/backendlab/javacore/oop/SuperKeywordExample.java) | SuperKeywordExample, AnimalBase, DogWithSuper | Implementada | Uso de super para acceder al padre y reutilizar inicializacion |
 | FilesInJava | [src/main/java/com/felipe/backendlab/javacore/oop/FilesInJava.java](src/main/java/com/felipe/backendlab/javacore/oop/FilesInJava.java) | FilesInJava | Implementada | IO de archivos |
 | InterfaceExample | [src/main/java/com/felipe/backendlab/javacore/oop/InterfaceExample.java](src/main/java/com/felipe/backendlab/javacore/oop/InterfaceExample.java) | InterfaceExample, PaymentMethod, CreditCardPayment, PayPalPayment | Implementada | Interfaces |
 | JavaBeansExample | [src/main/java/com/felipe/backendlab/javacore/oop/JavaBeansExample.java](src/main/java/com/felipe/backendlab/javacore/oop/JavaBeansExample.java) | JavaBeansExample, UsuarioBean, Usuario | Implementada | JavaBeans y encapsulamiento |

@@ -3,7 +3,7 @@ package com.felipe.backendlab.javacore.language;
 import java.util.Arrays;
 
 /**
- * VARARGS
+ * VARARGS (Argumentos variables)
  * <p>
  * Permite que un método reciba una cantidad variable de argumentos
  * del mismo tipo.
