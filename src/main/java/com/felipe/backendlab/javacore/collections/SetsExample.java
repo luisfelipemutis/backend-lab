@@ -17,7 +17,8 @@ import java.util.TreeSet;
  * <p>
  * Clase concreta: TreeSet (Esta clase implementa la interface Set y esta a su vez implementa collection)
  * <p>
- * Para este ejemplo al utilizar esta clase concreta, si permite el ordenamiento, pero existen otras clases que implmentan a set y no tienen orden.
+ * Para este ejemplo al utilizar esta clase concreta, si permite el ordenamiento, pero existen otras clases que
+ * implementan a set y no tienen orden.
  *
  */
 

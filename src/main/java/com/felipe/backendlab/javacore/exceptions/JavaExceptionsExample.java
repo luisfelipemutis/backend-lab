@@ -15,9 +15,9 @@ public class JavaExceptionsExample {
 }
 
 class Aritmetic {
-    public static int divide(int numerator, int denominator) {
+    public static int divide(int numerator, int denominator) throws RuntimeException {
         if (denominator == 0)
-            throw new RuntimeException("denominator cannot be zero");
+            throw new RuntimeException("Denominador no puede ser cero");
         return numerator / denominator;
     }
 }

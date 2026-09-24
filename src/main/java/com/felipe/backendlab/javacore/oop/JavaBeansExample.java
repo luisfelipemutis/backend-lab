@@ -11,6 +11,9 @@ import java.io.Serializable;
  * 1. Debe tener 1 constructor publico y vació. (Puede tener mas, pero si o si uno vació y publico)
  * 2. Debe cumplir con el concepto de encapsulamiento, atributos privados y métodos accesores para obtener y editar.
  * 3. Debe implementar la interface serializable - No tiene ningún método - Permite que los objetos sean serializados a disco o red.
+ * <p>
+ * Serealizable: Convertir un objeto a bytes para poder enviarlo por la red o guardarlo en disco.
+ * Deserealizable: Convertir los bytes a un objeto, en el lugar destino donde se hallan enviado los datos.
  *
  */
 
@@ -31,6 +34,7 @@ class UsuarioBean implements Serializable {
     private String lastName;
 
     public UsuarioBean() {
+        // Constructor vació
     }
 
     public String getName() {
@@ -55,7 +59,7 @@ class Usuario {
     // La clase JavaBean se puede utilizar para evitar una mala practica, compartiendo
     // solo el objeto y después pasando los parametros a la consulta por los métodos accesores.
     public static void insertUser(UsuarioBean user) {
-        String sql = "insert into usuario values (nombre, apellido) values ( " + user.getName() + ", " + user.getLastName() + ")";
+        String sql = "insert into usuario values (nombre, apellido) values (" + user.getName() + ", " + user.getLastName() + ");";
         System.out.println("Usuario insertado con exito: " + sql);
     }
 }

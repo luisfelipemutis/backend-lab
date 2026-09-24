@@ -7,6 +7,8 @@ package com.felipe.backendlab.javacore.collections;
  * Permite almacenar un conjunto de elementos del mismo tipo en una sola variable, en lugar de
  * declarar variables separadas para cada elemento.
  *
+ * El tamaño de un array es fijo y no puede cambiarse una vez que se ha creado.
+ *
  * */
 
 public class ArrayExample {

@@ -1,8 +1,6 @@
 package com.felipe.backendlab.javacore.collections;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * Array list
@@ -15,6 +13,7 @@ import java.util.List;
  * Caracteristicas:
  * Permite elementos duplicados
  * Maneja un orden
+ * A diferencia con array, este puede agregar, eliminar, editar elementos de manera dinámica.
  * <p>
  * Clase concreta: ArrayList (Esta clase implementa la interface List)
  *
@@ -23,14 +22,19 @@ import java.util.List;
 public class ArrayListExample {
     public static void main(String[] args) {
         List list = new ArrayList();
-        list.add("Monday");
+
         list.add("Tuesday");
         list.add("Wednesday");
         list.add("Thursday");
         list.add("Friday");
         list.add("Saturday");
-        list.add("Sunday");
+        list.add("Sunday2");
 
+        // Agregar elementos en una posición específica.
+        // list.add(0, "Monday");
+        list.addFirst("Monday");
+
+        System.out.println("lista de días de la semana: " + list);
         for (Object obj : list) {
             System.out.println("Day of the week: " + obj);
         }
@@ -49,10 +53,7 @@ public class ArrayListExample {
         // Funciones lambda (Función anonima de un código muy compacto).
         // se recomienda que el contenido sea muy compacto..
         System.out.println("\n\nFor each con función lambda.");
-        list.forEach(element -> {
-            System.out.println("Day of the week: " + element);
-        });
-
+        list.forEach(element -> System.out.println("Day of the week: " + element));
 
         // Objetivo de la programación funcional y la expresión lambda: es la simplificación del código y sea mas legible.
         System.out.println("\n\nFor each mas simplificada utilizando método :: de referencia.");

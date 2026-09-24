@@ -30,7 +30,19 @@ public class HashMapExample {
         dictionary.put("edad", "31");
         dictionary.put("edad", "31"); // No se guardan valores duplicados.
 
-        System.out.println("Valores del mapa: ");
+        // Recorrer el mapa por keys
+        System.out.println("Recorrer el mapa por keys");
+        for (String key : dictionary.keySet()) {
+            System.out.println("Key: " + key + ", Value: " + dictionary.get(key));
+        }
+
+        // Recorrer el mapa por values
+        System.out.println("\nRecorrer el mapa por values");
+        for (String value : dictionary.values()) {
+            System.out.println("Value: " + value);
+        }
+
+        System.out.println("\nValores del mapa: ");
         dictionary.entrySet().forEach(System.out::println);
 
         dictionary.put("edad", "35"); // Se modifica el valor de la llave existente
@@ -39,7 +51,7 @@ public class HashMapExample {
         dictionary.entrySet().forEach(System.out::println);
 
         // Iterar sobre elementos del mapa por separado.
-        System.out.println("\nIterando los elmentos (llave/valor)");
+        System.out.println("\nIterando los elementos (llave/valor)");
         dictionary.forEach((key, value) -> System.out.println(key + ": " + value));
     }
 }
