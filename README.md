@@ -80,6 +80,12 @@ Laboratorio personal para estudiar Java backend de forma practica. Este reposito
 | StaticKeywordExample | [src/main/java/com/felipe/backendlab/javacore/language/StaticKeywordExample.java](src/main/java/com/felipe/backendlab/javacore/language/StaticKeywordExample.java) | Implementada | Ejemplo de static en atributos, metodos y bloques |
 | VarargsExample | [src/main/java/com/felipe/backendlab/javacore/language/VarargsExample.java](src/main/java/com/felipe/backendlab/javacore/language/VarargsExample.java) | Implementada | Varargs |
 
+#### Package com.felipe.backendlab.javacore.generics
+
+| Clase | Archivo | Estado | Comentario |
+|---|---|---|---|
+| GenericBoxExample | [src/main/java/com/felipe/backendlab/javacore/generics/GenericBoxExample.java](src/main/java/com/felipe/backendlab/javacore/generics/GenericBoxExample.java) | Implementada | Ejemplo de clases, metodos y colecciones con tipos genericos |
+
 #### Package com.felipe.backendlab.javacore.oop
 
 | Clase principal | Archivo | Tipos declarados en el archivo | Estado | Comentario |
