@@ -4,6 +4,7 @@ import datos.Conexion;
 import datos.PersonaDao;
 import datos.PersonaDaoJDBC;
 import domain.PersonaDTO;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
@@ -34,7 +35,7 @@ public class ManejoPersona {
 
             PersonaDTO persona = new PersonaDTO(1, "Royal54321", "Sanchez00", "gmail.com", "");
             personaDao.update(persona);
-            
+
             conexion.commit();
             System.out.println("Se ha realizado el commit de la transaccion");
         } catch (SQLException ex) {

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head >
+        <title>Ejercicio de Formulario - Servlet</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h3>Formulario Registro de Datos</h3>
+                        </div>
+                        <div class="card-body">
+                            <form name="formulario1" action="/ManejoFormulariosHTML/Servlet" method="POST">
+
+                                <!--Elemento oculto-->
+                                <input type="hidden" name="oculto" value="Nuevo valor oculto"/>
+
+                                <!--usuario-->
+                                <div class="mb-3">
+                                    <label for="usuario" class="form-label">Usuario (*)</label>
+                                    <input type="text" class="form-control" name="usuario" id="usuario" 
+                                           value="Escribir usuario.." required/>
+                                </div>
+
+                                <!--password-->
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password (*)</label>
+                                    <input type="password" class="form-control" name="password"
+                                           id="password" required/>
+                                </div>
+
+                                <!--tecnologias-->
+                                <div class="mb-3">
+                                    <label class="form-label">Tecnologias</label><br/>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" name="tecnologia"
+                                               id="java" value="Java"/>
+                                        <label class="form-check-label" for="java">Java</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" name="tecnologia"
+                                               id="python" value="Python"/>
+                                        <label class="form-check-label" for="python">Python</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" name="tecnologia"
+                                               id=".net" value=".Net"/>
+                                        <label class="form-check-label" for=".net">.Net</label>
+                                    </div>
+                                </div>
+
+                                <!--Genero-->
+                                <div class="mb-3">
+                                    <label class="form-label">Genero</label><br/>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genero"
+                                               id="masculino" value="masculino"/>
+                                        <label class="form-check-label" for="masculino">Masculino</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genero"
+                                               id="femenino" value="femenino"/>
+                                        <label class="form-check-label" for="femenino">Femenino</label>
+                                    </div>
+                                </div>
+
+                                <!--Ocupacion-->
+                                <div class="mb-3">
+                                    <label for="ocupacion" class="form-label">Ocupacion</label>
+                                    <select name="ocupacion" id="ocupacion" class="form-select">
+                                        <option value="Ingenier@">Ingenier@</option>
+                                        <option value="Contador@">Contador@</option>
+                                        <option value="Abogad@">Abogad@</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
+                                </div>
+
+                                <!--Comentarios-->
+                                <div class="mb-3">
+                                    <label for="comentarios" class="form-label">Comentarios:</label>
+                                    <textarea class="form-control" name="comentarios" id="comentarios" rows="3"></textarea>
+                                </div>
+
+                                <!--Boton enviar-->
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+</html>
